@@ -81,6 +81,7 @@ function ContactForm() {
 
   return (
     <div className="flex items-center flex-col space-y-2">
+      <h3 className="font-mono text-2xl underline">Contact me</h3>
       <form
         className="flex items-center flex-col space-y-2"
         ref={form}

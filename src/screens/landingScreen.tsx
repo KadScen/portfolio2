@@ -8,6 +8,7 @@ function LandingScreen() {
       <div className="flex flex-col items-center space-y-8">
         <p className="font-mono text-2xl">I'm Alain Mondely</p>
         <p className="font-mono text-2xl">Front-End Developer</p>
+        <h3 className="font-mono text-2xl underline">About me</h3>
         <p className="font-mono text-xl text-center">
           I'm a front-end developer who loves making websites look cool and work
           smoothly. I worked with Javascript, Typescript, React and NextJs... so
