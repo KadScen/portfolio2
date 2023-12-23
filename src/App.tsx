@@ -1,5 +1,4 @@
 import LandingScreen from "./screens/landingScreen";
-import NeonBG from "./assets/neon_bg.jpg";
 
 function App() {
   return (
