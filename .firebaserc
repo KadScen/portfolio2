@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "portfolio2023-9edb9"
-  }
+    "default": "portfolio2023-9edb9",
+    "production": "portfolio2023-9edb9"
+  },
+  "targets": {},
+  "etags": {}
 }

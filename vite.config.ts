@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [react()],
   // define: { "process.env": {} },
   define: { "process.env": process.env },
+  build: {
+    outDir: "public", // Specify your desired output folder name
+  },
 });
