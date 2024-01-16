@@ -21,7 +21,7 @@ import FlatmateAppScreenshot5 from "../assets/flatmate_app_5.png";
 function ProjectsLinks() {
   return (
     <div className="flex flex-col items-center w-full">
-      <h3 className="font-mono text-2xl underline">My projects</h3>
+      {/* <h3 className="font-mono text-2xl underline">My projects</h3> */}
       <Project
         screenshotStatic={ImmeWebsitePNG}
         screenshotAnimated={ImmeWebsiteGIF}

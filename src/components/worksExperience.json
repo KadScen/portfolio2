@@ -1,0 +1,32 @@
+{
+  "cycurid": {
+    "position": "Front-end Web Developer / Lead Developer",
+    "companyAndDate": "Cycurid - Vancouver, Canada | 09/2022 to 10/2023",
+    "description": "Led end-to-end development, ensuring code excellence, efficient algorithms, and seamless integration for optimal software functionality:",
+    "tasks": [
+      "• Successfully led and managed the end-to-end development of 2 dynamic websites Imme.io and Cycurid.com, boosting user engagement and satisfaction. Implemented NextJs, Styled Components, and Redux to create responsive and visually appealing interfaces. Collaborated closely with designers, to ensure seamless integration of front-end components.",
+      "• Worked on the new iteration of our mobile app called Imme using React Native, resulting in a 25% smaller codebase and loading speed improvement. Employed Styled Components and Redux to ensure consistency and seamless navigation.",
+      "• Constructed 10 screens of our dashboard destined to be used as a backend for our user. It’s using NextJs, Tailwind CSS, and TypeScript. Collaborated closely with backend developers, to ensure seamless integration of front-end components through our different API points.",
+      "• Conducted regular code reviews and implemented best practices, to reduce post-launch bugs and improve code quality."
+    ]
+  },
+  "selfEmployed": {
+    "position": "Front-end Web Developer",
+    "companyAndDate": "Self-employed - Vancouver, Canada | 2020 to 2022",
+    "description": "Worked on personal projects to learn and improve my competencies in Front-end development using HTML, CSS, JavaScript,  React, and code versioning using Git. Two of my notable projects are:",
+    "tasks": [
+      "• Sightseer app: Designed and developed a dynamic social app to facilitate community engagement, enabling users to discover and share local opportunities. Utilized React for responsive user interfaces, integrated Firebase for real-time data management, and leveraged additional tools to enhance functionality.",
+      "• Flatmate app: Designed and implemented a home task management app, promoting transparency and collaboration. Developed with React, Firebase, and complementary tools for seamless user experience and efficient task tracking."
+    ]
+  },
+  "westCoastGifts": {
+    "position": "Office Administrator",
+    "companyAndDate": "West Coast Gifts - Vancouver, Canada | 2021 to 2022",
+    "description": "Worked as an Office Administrator:",
+    "tasks": [
+      "• Assist the Operations and Purchasing departments with vendor communication in regards to incoming orders. Schedule incoming and outgoing shipments to support warehouse workflow.",
+      "• Serve as Executive Assistant, completing personal, as well as work-related tasks as needed.",
+      "• Provide administrative support to other departments as needed."
+    ]
+  }
+}

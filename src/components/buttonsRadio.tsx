@@ -1,5 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
-import { motion } from "framer-motion";
+import { useState, ChangeEvent } from "react";
 import { Global, css } from "@emotion/react";
 
 function ButtonsRadio() {
