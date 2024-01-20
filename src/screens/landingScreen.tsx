@@ -1,28 +1,78 @@
-import ContactButtons from "../components/contactButtons";
-import ContactForm from "../components/contactForm";
-import ProjectsLinks from "../components/projectsLinks";
+import { useState } from "react";
+
+import HomeScreen from "./homeScreen";
+import ContactScreen from "./contactScreen";
+import ProjectsScreen from "./projectsScreen";
+import Workscreen from "./workScreen";
 
 function LandingScreen() {
+  const [screenSelected, setScreenSelected] = useState<string>("home");
+
+  const handleScreenSelected = (selectedScreen: string): void => {
+    setScreenSelected(selectedScreen);
+  };
+
+  const pageSelected = () => {
+    switch (screenSelected) {
+      case "home":
+        return <HomeScreen />;
+      case "projects":
+        return <ProjectsScreen />;
+      case "work":
+        return <Workscreen />;
+      case "contact":
+        return <ContactScreen />;
+      default:
+        return <HomeScreen />;
+    }
+  };
+
   return (
-    <div className="">
-      <div className="flex flex-col items-center space-y-8">
-        <p className="font-mono text-2xl">I'm Alain Mondely</p>
-        <p className="font-mono text-2xl">Front-End Developer</p>
-        <h3 className="font-mono text-2xl underline">About me</h3>
-        <p className="font-mono text-xl text-center">
-          I'm a front-end developer who loves making websites look cool and work
-          smoothly. I worked with Javascript, Typescript, React and NextJs... so
-          far. Let's create awesome stuff together!
-        </p>
-      </div>
-      <div className="flex justify-center mt-8">
-        <ProjectsLinks />
-      </div>
-      <div className="flex justify-center mt-8">
-        <ContactForm />
-      </div>
-      <div className="flex justify-end mt-8">
-        <ContactButtons />
+    <div className="h-full">
+      <div className="p-10 border border-black h-full">
+        <div className="space-y-10 h-2/6">
+          <div>
+            <p className="text-2xl">Alain Mondely</p>
+            <p className="">Front-End Developer</p>
+          </div>
+          <div>
+            <ul className="w-fit">
+              <li
+                className={`[text-l cursor-pointer hover:underline] ${
+                  screenSelected === "home" ? "underline font-semibold" : ""
+                }`}
+                onClick={() => handleScreenSelected("home")}
+              >
+                Home
+              </li>
+              <li
+                className={`[text-l cursor-pointer hover:underline] ${
+                  screenSelected === "projects" ? "underline font-semibold" : ""
+                }`}
+                onClick={() => handleScreenSelected("projects")}
+              >
+                Projects
+              </li>
+              <li
+                className={`[text-l cursor-pointer hover:underline] ${
+                  screenSelected === "work" ? "underline font-semibold" : ""
+                }`}
+                onClick={() => handleScreenSelected("work")}
+              >
+                Work
+              </li>
+              <li
+                className={`[text-l cursor-pointer hover:underline] ${
+                  screenSelected === "contact" ? "underline font-semibold" : ""
+                }`}
+                onClick={() => handleScreenSelected("contact")}
+              >
+                Contact
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="h-4/6">{pageSelected()}</div>
       </div>
     </div>
   );

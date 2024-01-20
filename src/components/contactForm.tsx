@@ -81,7 +81,7 @@ function ContactForm() {
 
   return (
     <div className="flex items-center flex-col space-y-2">
-      <h3 className="font-mono text-2xl underline">Contact me</h3>
+      <h3 className="underline">Contact me</h3>
       <form
         className="flex items-center flex-col space-y-2"
         ref={form}
@@ -92,7 +92,7 @@ function ContactForm() {
           value={inputName}
           type="text"
           name="from_name"
-          className="rounded-lg"
+          className="w-full"
           onChange={handleName}
           required
         />
@@ -101,7 +101,7 @@ function ContactForm() {
           value={inputEmail}
           type="email"
           name="from_email"
-          className="rounded-lg"
+          className="w-full"
           onChange={handleEmail}
           required
         />
@@ -109,7 +109,7 @@ function ContactForm() {
           placeholder="Message"
           value={inputMessage}
           name="message"
-          className="w-full rounded-lg"
+          className="w-full"
           onChange={handleMessage}
           required
         />
@@ -119,9 +119,7 @@ function ContactForm() {
           onChange={handleOnChange}
         />
         <input
-          className={`py-2 w-full rounded-lg ${
-            isButtonDisabled ? "" : "bg-white"
-          }`}
+          className={`py-2 w-full ${isButtonDisabled ? "" : "bg-white"}`}
           type="submit"
           value={
             isButtonDisabled
