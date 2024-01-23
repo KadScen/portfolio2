@@ -62,10 +62,10 @@ function Project(props: PropsTypes) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center max-w-2xl rounded-2xl my-8">
+    <div className="flex justify-center items-center my-8 space-x-10">
       {hasScreenshots && (
         <img
-          className="flex justify-center items-center w-full rounded-2xl my-4"
+          className="flex justify-center items-center max-w-sm rounded-2xl my-4"
           src={animatedStates["Imme"] ? screenshotAnimated : screenshotStatic}
           alt={altMessage}
           onMouseEnter={() => handleMouseEnter("Imme")}
@@ -74,7 +74,7 @@ function Project(props: PropsTypes) {
       )}
       {!hasScreenshots && screenshotList?.length === 1 ? (
         <img
-          className="flex justify-center items-center w-full rounded-2xl my-4"
+          className="flex justify-center items-center max-w-sm rounded-2xl my-4"
           src={screenshotList[0]}
           alt={altMessage}
           onMouseEnter={() => handleMouseEnter("Imme")}
@@ -82,22 +82,26 @@ function Project(props: PropsTypes) {
         />
       ) : null}
       {screenshotList && screenshotList.length > 1 ? (
-        <div className="rounded-2xl">
+        <div className="max-w-sm">
           <AwesomeSlider
             bullets={false}
             organicArrows={screenshotList.length > 1 ? true : false}
             transitionDelay={2000}
-            className="flex justify-center items-center w-[640px] h-[400px] bg-blue-500 rounded-2xl my-8"
+            className="flex justify-center items-center w-[640px] h-[256px] bg-blue-500 rounded-2xl my-8"
           >
             {handleLoopInArray()}
           </AwesomeSlider>
         </div>
       ) : null}
-      <p className="text-xl font-bold">{projectTitle}</p>
-      <p className="font-bold">
-        <a href={projectLink}>{projectName}</a>
-      </p>
-      <p className="text-center">{projectDescription}</p>
+      <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col items-center space-y-1">
+          <p className="text-xl font-bold">{projectTitle}</p>
+          <p className="font-bold">
+            <a href={projectLink}>{projectName}</a>
+          </p>
+        </div>
+        <p className="text-center">{projectDescription}</p>
+      </div>
     </div>
   );
 }

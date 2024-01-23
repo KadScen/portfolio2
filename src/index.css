@@ -20,6 +20,22 @@ body,
 
 .animate-slide-in {
   animation: slide-in 1000ms;
+  transition-delay: 500ms;
+}
+
+.animate-slide-in2 {
+  animation: slide-in 1000ms;
+  transition-delay: 1000ms;
+}
+
+.animate-slide-in3 {
+  animation: slide-in 1000ms;
+  transition-delay: 1500ms;
+}
+
+.animate-slide-in4 {
+  animation: slide-in 1000ms;
+  transition-delay: 2000ms;
 }
 
 .h-screen-minus-h-10 {
