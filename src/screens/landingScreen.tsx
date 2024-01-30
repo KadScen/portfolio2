@@ -28,9 +28,9 @@ function LandingScreen() {
   };
 
   return (
-    <div className="h-full">
+    <div className="min-h-screen">
       <div className="p-10 border border-black h-full">
-        <div className="space-y-10 h-2/6">
+        <div className="space-y-8">
           <div>
             <p className="text-2xl">Alain Mondely</p>
             <p className="">Front-End Developer</p>
@@ -72,7 +72,7 @@ function LandingScreen() {
             </ul>
           </div>
         </div>
-        <div className="h-4/6">{pageSelected()}</div>
+        <div className="h-[640px]">{pageSelected()}</div>
       </div>
     </div>
   );

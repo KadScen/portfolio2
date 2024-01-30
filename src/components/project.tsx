@@ -62,10 +62,10 @@ function Project(props: PropsTypes) {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center my-8 lg:space-x-10 space-x-0">
+    <div className="flex flex-col justify-center items-center my-8 lg:space-x-10 space-x-0">
       {hasScreenshots && (
         <img
-          className="flex justify-center items-center max-w-16 rounded-2xl my-4"
+          className="flex justify-center items-center max-w-16 md:max-w-xl rounded-2xl my-4"
           src={animatedStates["Imme"] ? screenshotAnimated : screenshotStatic}
           alt={altMessage}
           onMouseEnter={() => handleMouseEnter("Imme")}
@@ -74,7 +74,7 @@ function Project(props: PropsTypes) {
       )}
       {!hasScreenshots && screenshotList?.length === 1 ? (
         <img
-          className="flex justify-center items-center max-w-16 rounded-2xl my-4"
+          className="flex justify-center items-center max-w-16 md:max-w-xl rounded-2xl my-4"
           src={screenshotList[0]}
           alt={altMessage}
           onMouseEnter={() => handleMouseEnter("Imme")}

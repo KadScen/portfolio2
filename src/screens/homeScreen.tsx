@@ -34,7 +34,7 @@ function HomeScreen() {
       </div>
       <div className="w-full flex justify-end">
         <div className="lg:w-2/6 w-full">
-          <p className="text-xl">
+          <p className="text-lg md:text-xl">
             I'm a front-end developer who loves making websites look cool and
             work smoothly. I worked with Javascript, Typescript, React and
             NextJs... so far. Let's create awesome stuff together!

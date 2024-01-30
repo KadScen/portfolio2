@@ -2,7 +2,7 @@ import ContactForm from "../components/contactForm";
 
 function ContactScreen() {
   return (
-    <div className="h-full flex items-end justify-end animate-slide-in">
+    <div className="h-full flex items-end justify-center animate-slide-in">
       <ContactForm />
     </div>
   );
