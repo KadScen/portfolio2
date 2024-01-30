@@ -22,9 +22,8 @@ function HomeScreen() {
   ];
 
   return (
-    <div className="h-full grid grid-cols-3 grid-rows-2 animate-slide-in">
-      <div></div>
-      <div className="flex justify-center items-center min-w-max">
+    <div className="h-full animate-slide-in">
+      <div className="lg:w-full h-1/2 flex justify-center items-center min-w-max">
         <Carousel controls={false} indicators={false}>
           {mySkills.map((skill, index) => (
             <Carousel.Item interval={2000} key={index}>
@@ -33,15 +32,14 @@ function HomeScreen() {
           ))}
         </Carousel>
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div className="">
-        <p className="text-xl">
-          I'm a front-end developer who loves making websites look cool and work
-          smoothly. I worked with Javascript, Typescript, React and NextJs... so
-          far. Let's create awesome stuff together!
-        </p>
+      <div className="w-full flex justify-end">
+        <div className="lg:w-2/6 w-full">
+          <p className="text-xl">
+            I'm a front-end developer who loves making websites look cool and
+            work smoothly. I worked with Javascript, Typescript, React and
+            NextJs... so far. Let's create awesome stuff together!
+          </p>
+        </div>
       </div>
     </div>
   );

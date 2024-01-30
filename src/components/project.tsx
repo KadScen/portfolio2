@@ -62,10 +62,10 @@ function Project(props: PropsTypes) {
   };
 
   return (
-    <div className="flex justify-center items-center my-8 space-x-10">
+    <div className="flex flex-col lg:flex-row justify-center items-center my-8 lg:space-x-10 space-x-0">
       {hasScreenshots && (
         <img
-          className="flex justify-center items-center max-w-sm rounded-2xl my-4"
+          className="flex justify-center items-center max-w-16 rounded-2xl my-4"
           src={animatedStates["Imme"] ? screenshotAnimated : screenshotStatic}
           alt={altMessage}
           onMouseEnter={() => handleMouseEnter("Imme")}
@@ -74,7 +74,7 @@ function Project(props: PropsTypes) {
       )}
       {!hasScreenshots && screenshotList?.length === 1 ? (
         <img
-          className="flex justify-center items-center max-w-sm rounded-2xl my-4"
+          className="flex justify-center items-center max-w-16 rounded-2xl my-4"
           src={screenshotList[0]}
           alt={altMessage}
           onMouseEnter={() => handleMouseEnter("Imme")}
@@ -82,12 +82,12 @@ function Project(props: PropsTypes) {
         />
       ) : null}
       {screenshotList && screenshotList.length > 1 ? (
-        <div className="max-w-sm">
+        <div className="max-w-16">
           <AwesomeSlider
             bullets={false}
             organicArrows={screenshotList.length > 1 ? true : false}
             transitionDelay={2000}
-            className="flex justify-center items-center w-[640px] h-[256px] bg-blue-500 rounded-2xl my-8"
+            className="flex justify-center items-center max-w-sm w-[320px] md:w-[640px] h-[256px] bg-blue-500 rounded-2xl my-8"
           >
             {handleLoopInArray()}
           </AwesomeSlider>
@@ -100,7 +100,7 @@ function Project(props: PropsTypes) {
             <a href={projectLink}>{projectName}</a>
           </p>
         </div>
-        <p className="text-center">{projectDescription}</p>
+        <p className="text-justify">{projectDescription}</p>
       </div>
     </div>
   );
