@@ -1,6 +1,17 @@
 import { useState } from "react";
 import worksExperience from "./worksExperience.json";
 
+interface WorkExperienceInterface {
+  [key: string]: {
+    position: string;
+    companyAndDate: string;
+    description: string;
+    tasks: string[];
+  };
+}
+
+const worksExperienceData: WorkExperienceInterface = worksExperience;
+
 function WorkExperienceRadioCards() {
   // State to track the open/closed state of each job position
   const [menuStates, setMenuStates] = useState<{ [key: string]: boolean }>({});
@@ -21,8 +32,8 @@ function WorkExperienceRadioCards() {
     <>
       <div className="flex flex-col justify-center space-y-2">
         {/* Mapping through each job position */}
-        {Object.keys(worksExperience).map((key) => {
-          const job = worksExperience[key];
+        {Object.keys(worksExperienceData).map((key) => {
+          const job = worksExperienceData[key];
 
           return (
             <div
