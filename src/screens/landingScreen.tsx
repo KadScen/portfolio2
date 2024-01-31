@@ -29,7 +29,7 @@ function LandingScreen() {
 
   return (
     <div className="min-h-screen">
-      <div className="p-10 border border-black h-full">
+      <div className="p-10 border border-white rounded-2xl h-full shadow-2xl">
         <div className="space-y-8">
           <div>
             <p className="text-2xl">Alain Mondely</p>
