@@ -28,8 +28,8 @@ function LandingScreen() {
   };
 
   return (
-    <div className="min-h-screen">
-      <div className="p-10 border border-white rounded-2xl h-full shadow-2xl">
+    <div className="m-4 shadow-2xl overflow-hidden">
+      <div className="p-10 border border-white rounded-2xl shadow-2xl">
         <div className="space-y-8 max-w-fit">
           <div>
             <p className="text-2xl">Alain Mondely</p>
