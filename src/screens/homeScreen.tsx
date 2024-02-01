@@ -23,7 +23,7 @@ function HomeScreen() {
 
   return (
     <div className="flex items-center h-full">
-      <div className="flex flex-col items-center w-fit space-y-8 m-auto">
+      <div className="flex flex-col items-center w-full space-y-8 m-auto">
         <div className="relative flex flex-col items-center w-80">
           <div className="absolute -top-14 -left-8 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animate-slide-in"></div>
           <div className="absolute -top-20 -right-4 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-2000 animate-slide-in3"></div>
@@ -38,7 +38,7 @@ function HomeScreen() {
         </div>
         <div className="w-full flex justify-end pt-20">
           <div className="lg:w-2/6 w-full animate-slide-in4">
-            <p className="text-lg md:text-xl">
+            <p className="text-lg md:text-xl text-justify">
               I'm a front-end developer who loves making websites look cool and
               work smoothly. I worked with Javascript, Typescript, React and
               NextJs... so far. Let's create awesome stuff together!
