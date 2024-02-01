@@ -109,9 +109,9 @@ function Workscreen() {
         }`}
       >
         <div className="relative flex flex-col items-end w-80">
-          <div className="absolute -top-5 -left-8 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animate-slide-in"></div>
-          <div className="absolute -top-14 -right-4 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-2000 animate-slide-in3"></div>
-          <div className="absolute -top-5 left-40 w-48 h-48 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-4000 animate-slide-in4"></div>
+          <div className="absolute -top-5 -left-8 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob"></div>
+          <div className="absolute -top-14 -right-4 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-2000"></div>
+          <div className="absolute -top-5 left-40 w-48 h-48 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-4000"></div>
           <div className="z-10">
             <p
               className="text-2xl cursor-pointer hover:underline animate-slide-in"
