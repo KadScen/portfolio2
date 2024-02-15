@@ -62,7 +62,7 @@ function Project(props: PropsTypes) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center my-8 lg:space-x-10 space-x-0">
+    <div className="flex flex-col lg:flex-row justify-center items-center my-8 lg:space-x-10 space-x-0">
       {hasScreenshots && (
         <img
           className="flex justify-center items-center max-w-16 md:max-w-xl rounded-2xl my-4"

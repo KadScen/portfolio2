@@ -30,7 +30,7 @@ function ProjectsScreen() {
             projectTitle="Front-End Developer"
             projectName="Sightseer app"
             projectLink="https://sightseer.firebaseapp.com/"
-            projectDescription="Sightseer is a travel app. Utilizing React, Class Components, and Bootstrap, I crafted an immersive user experience. The app seamlessly integrates Firebase for secure authentication, storage, and real-time updates through Cloud Firestore. With a visually appealing and responsive design, Sightseer goes beyond being an app—it's a sophisticated travel companion, transforming exploration into unforgettable memories."
+            projectDescription="Sightseer is a travel app. Utilizing React, Class Components, and Bootstrap, I crafted an immersive user experience. The app seamlessly integrates Firebase for secure authentication, storage, and real-time updates through Cloud Firestore. With a visually appealing and responsive design, Sightseer goes beyond being an app, it's a sophisticated travel companion, transforming exploration into unforgettable memories."
           />
         );
       case "flatmate":
