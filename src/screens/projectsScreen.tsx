@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 import Project from "../components/project";
 import SightseerAppGIF from "../assets/sightseer_app.gif";
@@ -11,10 +13,15 @@ import FlatmateAppScreenshot5 from "../assets/flatmate_app_5.png";
 
 function ProjectsScreen() {
   const [showingProjects, setShowingProjects] = useState<string>("");
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
   const handleProject = (e: string) => {
     // Must hide list of project and reveal project selected
     setShowingProjects(e);
+    setShow(true);
   };
 
   const selectedProject = () => {
@@ -58,13 +65,14 @@ function ProjectsScreen() {
 
   return (
     <div className="h-full">
-      <div
-        className={`${
-          showingProjects
-            ? "hidden"
-            : "flex flex-col justify-center items-end space-y-5 h-full"
-        }`}
-      >
+      <style>
+        {`
+       .modal-90w {
+        min-width:90%;
+      }
+        `}
+      </style>
+      <div className="flex flex-col justify-center items-end space-y-5 h-full">
         <div className="relative flex flex-col items-end w-80">
           <div className="absolute -top-14 -left-8 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob"></div>
           <div className="absolute -top-20 -right-4 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-2000"></div>
@@ -89,19 +97,26 @@ function ProjectsScreen() {
         className={`[flex h-full justify-center] ${
           showingProjects ? "block" : "hidden"
         }`}
-      >
-        <div className="flex h-full justify-center items-center">
-          {selectedProject()}
-        </div>
-        <div className="flex justify-end items-end">
-          <p
-            className="cursor-pointer hover:underline"
-            onClick={() => handleProject("")}
-          >
-            Back &gt;
-          </p>
-        </div>
-      </div>
+      ></div>
+
+      <>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          centered
+          dialogClassName="modal-90w"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Sightseer App (Modal)</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{selectedProject()}</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
     </div>
   );
 }
