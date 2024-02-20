@@ -28,9 +28,9 @@ function LandingScreen() {
   };
 
   return (
-    <div className=" shadow-2xl overflow-hidden">
-      <div className="p-10 border border-white rounded-2xl shadow-2xl">
-        <div className="space-y-8 max-w-fit">
+    <div className="shadow-2xl overflow-hidden h-full">
+      <div className="p-10 border border-white rounded-2xl shadow-2xl h-full">
+        <div className="space-y-8 max-w-fit h-2/6">
           <div>
             <p className="text-2xl">Alain Mondely</p>
             <p className="">Front-End Developer</p>
@@ -72,7 +72,7 @@ function LandingScreen() {
             </ul>
           </div>
         </div>
-        <div className="h-[640px]">{pageSelected()}</div>
+        <div className="h-4/6">{pageSelected()}</div>
       </div>
     </div>
   );
