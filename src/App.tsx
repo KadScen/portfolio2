@@ -2,7 +2,7 @@ import LandingScreen from "./screens/landingScreen";
 
 function App() {
   return (
-    <div className="xl:mx-auto min-h-screen max-w-screen-xl">
+    <div className="xl:mx-auto py-4 min-h-screen max-w-screen-xl">
       <LandingScreen />
     </div>
   );

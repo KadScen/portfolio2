@@ -28,7 +28,7 @@ function LandingScreen() {
   };
 
   return (
-    <div className="p-4 shadow-2xl overflow-hidden">
+    <div className=" shadow-2xl overflow-hidden">
       <div className="p-10 border border-white rounded-2xl shadow-2xl">
         <div className="space-y-8 max-w-fit">
           <div>
