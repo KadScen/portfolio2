@@ -106,9 +106,9 @@ function ProjectsScreen() {
           centered
           dialogClassName="modal-90w"
         >
-          <Modal.Header closeButton>
+          {/* <Modal.Header closeButton>
             <Modal.Title>Sightseer App (Modal)</Modal.Title>
-          </Modal.Header>
+          </Modal.Header> */}
           <Modal.Body>{selectedProject()}</Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
