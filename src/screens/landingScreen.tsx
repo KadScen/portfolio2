@@ -36,7 +36,7 @@ function LandingScreen() {
             <p className="">Front-End Developer</p>
           </div>
           <div>
-            <ul className="w-fit">
+            <ul className="w-fit p-0">
               <li
                 className={`[text-l cursor-pointer hover:underline] ${
                   screenSelected === "home" ? "underline font-semibold" : ""
