@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import HomeScreen from "./homeScreen";
 import ContactScreen from "./contactScreen";
@@ -7,6 +7,13 @@ import Workscreen from "./workScreen";
 
 function LandingScreen() {
   const [screenSelected, setScreenSelected] = useState<string>("home");
+  const [landingFinished, setLandingFinished] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLandingFinished(true);
+    }, 4000);
+  }, []);
 
   const handleScreenSelected = (selectedScreen: string): void => {
     setScreenSelected(selectedScreen);
@@ -27,10 +34,20 @@ function LandingScreen() {
     }
   };
 
-  return (
-    <div className="shadow-2xl overflow-hidden h-full">
-      <div className="p-10 border border-white rounded-2xl shadow-2xl h-full">
-        <div className="space-y-8 max-w-fit h-2/6">
+  const LandingTitle = () => {
+    return (
+      <div className={`h-full flex flex-col justify-center animate-fade-in`}>
+        {/* <p className="text-4xl">Welcome</p> */}
+        <p className="text-2xl">My name is Alain Mondely</p>
+        <p className="text-4xl">I'm a Front-End Developer</p>
+      </div>
+    );
+  };
+
+  const LandingHome = () => {
+    return (
+      <>
+        <div className="space-y-8 max-w-fit h-2/6 animate-fade-in">
           <div>
             <p className="text-2xl">Alain Mondely</p>
             <p className="">Front-End Developer</p>
@@ -73,6 +90,14 @@ function LandingScreen() {
           </div>
         </div>
         <div className="h-4/6">{pageSelected()}</div>
+      </>
+    );
+  };
+
+  return (
+    <div className="shadow-2xl overflow-hidden h-full">
+      <div className="p-10 border border-white rounded-2xl shadow-2xl h-full">
+        {landingFinished ? <LandingHome /> : <LandingTitle />}
       </div>
     </div>
   );

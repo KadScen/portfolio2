@@ -39,9 +39,6 @@ function HomeScreen() {
         <div className="w-full h-full flex justify-end pt-20">
           <div className="lg:w-4/6 w-full animate-slide-in4 space-y-4">
             <p className="text-lg md:text-xl text-end">
-              I worked with Javascript, Typescript, React and NextJs... so far.
-            </p>
-            <p className="text-lg md:text-xl text-end">
               I love making websites look cool and work smoothly.
             </p>
             <p className="text-lg md:text-xl text-end">
