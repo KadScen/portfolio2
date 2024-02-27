@@ -28,8 +28,8 @@ function LandingScreen() {
   };
 
   return (
-    <div className="shadow-2xl overflow-hidden h-full">
-      <div className="p-10 border border-white rounded-2xl shadow-2xl h-full">
+    <div className="shadow-2xl overflow-hidden">
+      <div className="flex flex-col p-4 md:p-10 border border-white rounded-2xl shadow-2xl min-h-screen">
         <div className="space-y-8 max-w-fit h-2/6 animate-fade-in">
           <div>
             <p className="text-2xl">Alain Mondely</p>
@@ -72,7 +72,7 @@ function LandingScreen() {
             </ul>
           </div>
         </div>
-        <div className="h-4/6">{pageSelected()}</div>
+        <div className="flex grow">{pageSelected()}</div>
       </div>
     </div>
   );

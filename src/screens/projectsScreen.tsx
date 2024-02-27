@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 
 import Project from "../components/project";
 import SightseerAppGIF from "../assets/sightseer_app.gif";
@@ -13,15 +11,13 @@ import FlatmateAppScreenshot5 from "../assets/flatmate_app_5.png";
 
 function ProjectsScreen() {
   const [showingProjects, setShowingProjects] = useState<string>("");
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => setShowingProjects("");
   // const handleShow = () => setShow(true);
 
   const handleProject = (e: string) => {
     // Must hide list of project and reveal project selected
     setShowingProjects(e);
-    setShow(true);
   };
 
   const selectedProject = () => {
@@ -63,8 +59,32 @@ function ProjectsScreen() {
     }
   };
 
+  const ProjectList = () => {
+    return (
+      <div className="relative flex flex-col items-end w-80">
+        <div className="absolute -top-14 -left-8 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob"></div>
+        <div className="absolute -top-20 -right-4 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-2000"></div>
+        <div className="absolute -top-14 left-40 w-48 h-48 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-4000"></div>
+        <div className="z-10">
+          <p
+            className="text-2xl cursor-pointer hover:underline animate-slide-in"
+            onClick={() => handleProject("sightseer")}
+          >
+            Sightseer App
+          </p>
+          <p
+            className="text-2xl cursor-pointer hover:underline animate-slide-in4"
+            onClick={() => handleProject("flatmate")}
+          >
+            Flatmate App
+          </p>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="h-full">
+    <div className="flex-1">
       <style>
         {`
        .modal-90w {
@@ -72,51 +92,16 @@ function ProjectsScreen() {
       }
         `}
       </style>
-      <div className="flex flex-col justify-center items-end space-y-5 h-full">
-        <div className="relative flex flex-col items-end w-80">
-          <div className="absolute -top-14 -left-8 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob"></div>
-          <div className="absolute -top-20 -right-4 w-48 h-48 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-2000"></div>
-          <div className="absolute -top-14 left-40 w-48 h-48 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob animation-delay-4000"></div>
-          <div className="z-10">
-            <p
-              className="text-2xl cursor-pointer hover:underline animate-slide-in"
-              onClick={() => handleProject("sightseer")}
-            >
-              Sightseer App
-            </p>
-            <p
-              className="text-2xl cursor-pointer hover:underline animate-slide-in4"
-              onClick={() => handleProject("flatmate")}
-            >
-              Flatmate App
-            </p>
-          </div>
+      <div className="h-full">
+        <div className="flex flex-col justify-center items-end space-y-5 h-full">
+          {showingProjects === "" ? <ProjectList /> : selectedProject()}
         </div>
+        {showingProjects === "" ? null : (
+          <div className="flex justify-end">
+            <button onClick={handleClose}>Back</button>
+          </div>
+        )}
       </div>
-      <div
-        className={`[flex h-full justify-center] ${
-          showingProjects ? "block" : "hidden"
-        }`}
-      ></div>
-
-      <>
-        <Modal
-          show={show}
-          onHide={handleClose}
-          centered
-          dialogClassName="modal-90w"
-        >
-          {/* <Modal.Header closeButton>
-            <Modal.Title>Sightseer App (Modal)</Modal.Title>
-          </Modal.Header> */}
-          <Modal.Body>{selectedProject()}</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </>
     </div>
   );
 }

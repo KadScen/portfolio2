@@ -92,7 +92,7 @@ function Workscreen() {
   };
 
   return (
-    <div className="h-full">
+    <div className="flex-1">
       <style>
         {`
        .modal-90w {

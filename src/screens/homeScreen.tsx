@@ -22,7 +22,7 @@ function HomeScreen() {
   ];
 
   return (
-    <div className="flex items-center h-full">
+    <div className="flex items-center flex-1">
       <div className="flex flex-col items-center w-full h-full space-y-8 m-auto">
         <div className="relative h-full flex flex-col items-center justify-center w-80">
           <div className="absolute top-14 -left-8 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob"></div>
