@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 
 import Project from "../components/project";
 import ImmeWebsiteGIF from "../assets/imme_website.gif";
@@ -14,15 +12,13 @@ import NDAPNG from "../assets/nda.png";
 
 function Workscreen() {
   const [showingProjects, setShowingProjects] = useState<string>("");
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => setShowingProjects("");
   // const handleShow = () => setShow(true);
 
   const handleProject = (e: string) => {
     // Must hide list of project and reveal project selected
     setShowingProjects(e);
-    setShow(true);
   };
 
   const selectedProject = () => {
@@ -91,15 +87,8 @@ function Workscreen() {
     }
   };
 
-  return (
-    <div className="flex-1">
-      <style>
-        {`
-       .modal-90w {
-        min-width:90%;
-      }
-        `}
-      </style>
+  const WorkList = () => {
+    return (
       <div className="flex flex-col justify-center items-end space-y-5 h-full">
         <div className="relative flex flex-col items-end w-80">
           <div className="absolute -top-5 -left-8 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-75 animate-blob"></div>
@@ -133,30 +122,25 @@ function Workscreen() {
           </div>
         </div>
       </div>
-      <div
-        className={`[flex h-full justify-center] ${
-          showingProjects ? "block" : "hidden"
-        }`}
-      >
-        <>
-          <Modal
-            show={show}
-            onHide={handleClose}
-            centered
-            dialogClassName="modal-90w"
-          >
-            {/* <Modal.Header closeButton>
-              <Modal.Title>Sightseer App (Modal)</Modal.Title>
-            </Modal.Header> */}
-            <Modal.Body>{selectedProject()}</Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </>
-      </div>
+    );
+  };
+
+  return (
+    <div className="flex-1">
+      <style>
+        {`
+       .modal-90w {
+        min-width:90%;
+      }
+        `}
+      </style>
+
+      {showingProjects === "" ? <WorkList /> : selectedProject()}
+      {showingProjects === "" ? null : (
+        <div className="flex justify-end">
+          <button onClick={handleClose}>Back</button>
+        </div>
+      )}
     </div>
   );
 }

@@ -65,7 +65,7 @@ function Project(props: PropsTypes) {
     <div className="flex flex-col lg:flex-row justify-center items-center my-8 lg:space-x-10 space-x-0">
       {hasScreenshots && (
         <img
-          className="flex justify-center items-center max-w-16 md:max-w-xl rounded-2xl my-4"
+          className="flex justify-center items-center w-full md:w-2/3 lg:w-1/2 rounded-2xl my-4"
           src={animatedStates["Imme"] ? screenshotAnimated : screenshotStatic}
           alt={altMessage}
           onMouseEnter={() => handleMouseEnter("Imme")}
@@ -74,7 +74,7 @@ function Project(props: PropsTypes) {
       )}
       {!hasScreenshots && screenshotList?.length === 1 ? (
         <img
-          className="flex justify-center items-center max-w-16 md:max-w-xl rounded-2xl my-4"
+          className="flex justify-center items-center w-full md:w-2/3 lg:w-1/2 rounded-2xl my-4"
           src={screenshotList[0]}
           alt={altMessage}
           onMouseEnter={() => handleMouseEnter("Imme")}
@@ -93,7 +93,7 @@ function Project(props: PropsTypes) {
           </AwesomeSlider>
         </div>
       ) : null}
-      <div className="flex flex-col items-center space-y-4">
+      <div className="flex flex-col items-center space-y-4 w-full lg:w-1/2">
         <div className="flex flex-col items-center space-y-1">
           <p className="text-xl font-bold">{projectTitle}</p>
           <p className="font-bold">
